@@ -2,9 +2,6 @@ package chp2;
 
 import java.util.Arrays;
 
-/*
- * Topic 2.3 : Merge Sort
- * */
 public class MergeSort {
 	public static void main(String[] args) {
 		int[] A = {2, 4, 5, 7, 1, 2, 3, 6};

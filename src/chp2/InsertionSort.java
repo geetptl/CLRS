@@ -2,9 +2,6 @@ package chp2;
 
 import java.util.Arrays;
 
-/*
-* Topic 2.1 : Insertion Sort
-* */
 public class InsertionSort {
 	public static void main(String[] args) {
 		int[] A = {2, 3, 5, 4, 1, 3};
