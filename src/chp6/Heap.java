@@ -1,10 +1,10 @@
 package chp6;
 
-import java.util.Arrays;
 import util.CLRSUtil;
 
 public class Heap {
 	private static final CLRSUtil<Integer> clrsUtil = new CLRSUtil<>();
+
 	public static void main(String[] args) {
 		Integer[] A = {4, 1, 3, 2, 16, 9, 10, 14, 8, 7};
 
@@ -25,7 +25,7 @@ public class Heap {
 		int r = right(i);
 
 		System.out.println("\tA : " + clrsUtil.ArrayToString(A));
-		System.out.printf("\t%d, %d, %d",i, l, r);
+		System.out.printf("\tComparing %d, %d, %d", i, l, r);
 		int largest = i;
 		if (l < A.length && A[l] > A[i]) largest = l;
 		if (r < A.length && A[r] > A[largest]) largest = r;
