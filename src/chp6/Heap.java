@@ -27,7 +27,7 @@ public class Heap {
 		}
 		A[i] = key;
 		while (i > 0 && A[parent(i)] < A[i]) {
-			swap(A, i, parent(i));
+			clrsUtil.swapArrayElements(A, i, parent(i));
 			i = parent(i);
 		}
 	}
@@ -36,7 +36,7 @@ public class Heap {
 		buildMaxHeap(A);
 		int elemCount = 1;
 		for (int i = A.length - 1; i >= 0; i--) {
-			swap(A, 0, i);
+			clrsUtil.swapArrayElements(A, 0, i);
 			maxHeapify(A, 0, A.length - elemCount);
 			elemCount++;
 		}
@@ -59,15 +59,9 @@ public class Heap {
 
 		if (largest != i) {
 			System.out.printf("\tSwapping %d and %d\n", i, largest);
-			swap(A, i, largest);
+			clrsUtil.swapArrayElements(A, i, largest);
 			maxHeapify(A, largest, heapSize);
 		}
-	}
-
-	private static void swap(Integer[] A, int i, int largest) {
-		int temp = A[i];
-		A[i] = A[largest];
-		A[largest] = temp;
 	}
 
 	private static int right(int i) {

@@ -10,4 +10,10 @@ public class CLRSUtil<T> {
 		}
 		return "[" + String.join(", ", A_) + "]";
 	}
+
+	public void swapArrayElements(T[] A, int i, int j) {
+		T temp = A[i];
+		A[i] = A[j];
+		A[j] = temp;
+	}
 }
