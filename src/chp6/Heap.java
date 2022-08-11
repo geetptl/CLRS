@@ -17,7 +17,7 @@ public class Heap {
 		System.out.println("A : " + clrsUtil.ArrayToString(A_));
 
 		System.out.println("A : " + clrsUtil.ArrayToString(A_));
-		heapsort(A);
+		heapSort(A);
 		System.out.println("A : " + clrsUtil.ArrayToString(A_));
 	}
 
@@ -32,7 +32,7 @@ public class Heap {
 		}
 	}
 
-	private static void heapsort(Integer[] A) {
+	private static void heapSort(Integer[] A) {
 		buildMaxHeap(A);
 		int elemCount = 1;
 		for (int i = A.length - 1; i >= 0; i--) {
