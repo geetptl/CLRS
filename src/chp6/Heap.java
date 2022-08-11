@@ -13,10 +13,23 @@ public class Heap {
 		System.out.println("A : " + clrsUtil.ArrayToString(A_));
 		buildMaxHeap(A_);
 		System.out.println("A : " + clrsUtil.ArrayToString(A_));
+		increaseKey(A_, 4, 20);
+		System.out.println("A : " + clrsUtil.ArrayToString(A_));
 
-		System.out.println("A : " + clrsUtil.ArrayToString(A));
+		System.out.println("A : " + clrsUtil.ArrayToString(A_));
 		heapsort(A);
-		System.out.println("A : " + clrsUtil.ArrayToString(A));
+		System.out.println("A : " + clrsUtil.ArrayToString(A_));
+	}
+
+	private static void increaseKey(Integer[] A, int i, int key) {
+		if (key < A[i]) {
+			return;
+		}
+		A[i] = key;
+		while (i > 0 && A[parent(i)] < A[i]) {
+			swap(A, i, parent(i));
+			i = parent(i);
+		}
 	}
 
 	private static void heapsort(Integer[] A) {
@@ -63,5 +76,9 @@ public class Heap {
 
 	private static int left(int i) {
 		return (2 * i) + 1;
+	}
+
+	private static int parent(int i) {
+		return (i - 1) / 2;
 	}
 }
