@@ -16,9 +16,9 @@ public class Heap {
 		increaseKey(A_, 4, 20);
 		System.out.println("A : " + clrsUtil.ArrayToString(A_));
 
-		System.out.println("A : " + clrsUtil.ArrayToString(A_));
+		System.out.println("A : " + clrsUtil.ArrayToString(A));
 		heapSort(A);
-		System.out.println("A : " + clrsUtil.ArrayToString(A_));
+		System.out.println("A : " + clrsUtil.ArrayToString(A));
 	}
 
 	private static void increaseKey(Integer[] A, int i, int key) {
