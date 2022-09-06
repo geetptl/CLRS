@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MergeSort {
 	public static void main(String[] args) {
-		int[] A = {2, 4, 5, 7, 1, 2, 3, 6};
+		int[] A = {5, 2, 4, 1, 7, 2, 3, 6};
 		mergeSort(A, 0, 7);
 		System.out.println("A : " + Arrays.toString(A));
 	}
@@ -20,6 +20,7 @@ public class MergeSort {
 	}
 
 	public static void merge(int[] A, int p, int q, int r) {
+		System.out.printf("Merging %d, %d, %d in %s\n", p, q, r, Arrays.toString(A));
 		int n1 = q - p + 1;
 		int n2 = r - q;
 
@@ -43,5 +44,6 @@ public class MergeSort {
 				j++;
 			}
 		}
+		System.out.printf("After merging %s\n", Arrays.toString(A));
 	}
 }
